@@ -1,15 +1,14 @@
-let myLibrary = [];
+let myLibrary = [book1];
 
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read;
-  this.info = function () {
-    console.log(
-      title + " by " + author + ", " + pages + " pages, " + read + "."
-    );
-  };
+}
+
+function displayBook(myLibrary) {
+  //displays books in card format
 }
 
 function addBookToLibrary() {
@@ -22,5 +21,3 @@ const book1 = new Book(
   "295",
   "not already read"
 );
-
-book1.info();
