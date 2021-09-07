@@ -1,3 +1,10 @@
+.nav-bar {
+  display: flex;
+}
+.nav-btn {
+  margin-left: auto;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
