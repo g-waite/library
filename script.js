@@ -1,3 +1,5 @@
+const addBtn = document.querySelector(".btn");
+
 let myLibrary = [book1];
 
 function Book(title, author, pages, read) {
@@ -21,3 +23,5 @@ const book1 = new Book(
   "295",
   "not already read"
 );
+
+addBtn.addEventListener("click", addBookToLibrary);
