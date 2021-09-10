@@ -13,14 +13,14 @@
   padding-top: 20px;
 }
 
-.card {
+.book {
   width: fit-content;
   display: flex;
   flex-direction: column;
   border: 1px black solid;
 }
 
-.header {
+.title {
   height: 25%;
   background: black;
   color: white;
@@ -28,13 +28,10 @@
   font-size: large;
 }
 
-.container {
+.container,
+.author,
+.pages,
+.read {
   padding: 2px 16px;
   text-align: center;
-}
-
-.pages {
-}
-
-.read {
 }
