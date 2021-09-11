@@ -16,10 +16,12 @@ const book1 = new Book(
 
 let myLibrary = [book1];
 
+displayBook();
+
 function displayBook() {
   const display = document.getElementsByClassName("grid-container");
   const books = document.querySelectorAll(".book");
-  books.forEach((book) => display.removeChild(book));
+  //books.forEach((book) => displayBook.removeChild(book));
 
   for (let i = 0; i < myLibrary.length; i++) {
     addBookToLibrary(myLibrary[i]);
@@ -34,8 +36,7 @@ function addBookToLibrary(item) {
   const pagesDiv = document.createElement("div");
   const readDiv = document.createElement("div");
 
-  bookDiv.classList.add("book");
-  bookDiv.setAttribute("class", myLibrary.indexOf(item));
+  bookDiv.classList.add("book", myLibrary.indexOf(item));
 
   titleDiv.textContent = item.title;
   titleDiv.classList.add("title");
