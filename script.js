@@ -57,4 +57,6 @@ function addBookToLibrary(item) {
   library.appendChild(bookDiv);
 }
 
+function newBook() {}
+
 //ddBtn.addEventListener("click", addBookToLibrary);
