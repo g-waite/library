@@ -1,4 +1,6 @@
-const addBtn = document.querySelector(".btn");
+const addBtn = document.querySelector(".add-book-btn");
+const cancelBtn = document.querySelector(".cancel-btn");
+document.getElementById("overlay").style.display = "none";
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -57,6 +59,13 @@ function addBookToLibrary(item) {
   library.appendChild(bookDiv);
 }
 
-function newBook() {}
+function newBook() {
+  document.getElementById("overlay").style.display = "block";
+}
 
-//ddBtn.addEventListener("click", addBookToLibrary);
+function cancelForm() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+addBtn.addEventListener("click", newBook);
+cancelBtn.addEventListener("click", cancelForm);

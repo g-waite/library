@@ -11,8 +11,11 @@
   <body>
     <section class="nav-bar">
       <section class="nav-btn">
-        <button class="add-book">New Book</button>
-        <button class="rst-book">Reset</button>
+        <button type="button" class="add-book-btn">New Book</button>
+        <button type="button" class="rst-book">Reset</button>
+      </section>
+    </section>
+    <div id="overlay">
         <form id="add-book-form" >
         <label for="title">Title</label><br/>
         <input type="text" id="title" name="title" required><br/>
@@ -23,9 +26,9 @@
         <input type="checkbox" id="yes-read" name="read" value="Have read">
         <label for="is-read">Read?</label><br>
         <input type="submit" id="form-submit" value="Add Book">
+        <button type="button" class="cancel-btn">Cancel</button>
       </form>
-      </section>
-    </section>
+      </div>
     <section class="grid-container">
       <section class="book">
         <div class="title">Lord of the Rings</div>
