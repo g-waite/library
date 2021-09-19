@@ -20,6 +20,7 @@ let myLibrary = [book1];
 
 displayBook();
 
+//shows grid of books
 function displayBook() {
   const display = document.getElementsByClassName("grid-container");
   const books = document.querySelectorAll(".book");
