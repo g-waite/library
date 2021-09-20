@@ -15,15 +15,16 @@ const book1 = new Book(
   "295",
   "not already read"
 );
+const book2 = new Book("Mistborn", "Brandon Sanderson", "390", "already read");
 
-let myLibrary = [book1];
+let myLibrary = [book1, book2];
 
 displayBook();
 
 //shows grid of books
 function displayBook() {
-  const display = document.getElementsByClassName("grid-container");
-  const books = document.querySelectorAll(".book");
+  //const display = document.getElementsByClassName(".grid-container");
+  //const books = document.querySelectorAll(".book");
   //books.forEach((book) => displayBook.removeChild(book));
 
   for (let i = 0; i < myLibrary.length; i++) {
