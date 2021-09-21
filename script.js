@@ -1,5 +1,6 @@
 const addBtn = document.querySelector(".add-book-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
+const form = document.forms[0];
 document.getElementById("overlay").style.display = "none";
 
 function Book(title, author, pages, read) {
@@ -63,6 +64,15 @@ function addBookToLibrary(item) {
 
 function newBook() {
   document.getElementById("overlay").style.display = "block";
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+
+    for (const formElement of formData) {
+      console.log(formElement);
+    }
+  });
 }
 
 function cancelForm() {
