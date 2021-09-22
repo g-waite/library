@@ -67,12 +67,22 @@ function newBook() {
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    const formData = new FormData(this);
 
-    for (const formElement of formData) {
-      console.log(formElement);
-    }
+    const book = new Book(title, author, pages, read);
+
+    book.forEach((book) => {
+      book.push(myLibrary);
+    });
+    // const formData = new FormData(this);
+
+    // for (const formElement of formData) {
+    //   console.log(formElement);
+    // }
   });
+}
+
+function addNewBook() {
+  displayBook();
 }
 
 function cancelForm() {

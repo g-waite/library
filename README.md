@@ -14,7 +14,7 @@ Library App Odin Project
 
 4. Add new book button so users can add books to the library
 
-   Haven't used forms in javascript yet, look this up
+   Haven't used forms in javascript yet, look this up <done>
    Find a way to translate form data into something the constructor can use.
    Currently using a "read/not read" text object for read status. Switch to using a button that toggles true/false.
 
