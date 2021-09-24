@@ -10,13 +10,8 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-const book1 = new Book(
-  "The Hobbit",
-  "J.R.R. Tolkien",
-  "295",
-  "not already read"
-);
-const book2 = new Book("Mistborn", "Brandon Sanderson", "390", "already read");
+const book1 = new Book("The Hobbit", "J.R.R. Tolkien", "295", "false");
+const book2 = new Book("Mistborn", "Brandon Sanderson", "390", "true");
 
 let myLibrary = [book1, book2];
 
@@ -68,16 +63,16 @@ function newBook() {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const book = new Book(title, author, pages, read);
+    //const book = new Book(title, author, pages, read);
 
-    book.forEach((book) => {
-      book.push(myLibrary);
-    });
-    // const formData = new FormData(this);
+    // book.forEach((book) => {
+    //   book.push(myLibrary);
+    // });
+    const formData = new FormData(this);
 
-    // for (const formElement of formData) {
-    //   console.log(formElement);
-    // }
+    for (const formElement of formData) {
+      console.log(formElement);
+    }
   });
 }
 
