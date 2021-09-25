@@ -77,7 +77,7 @@ function newBook() {
       let read = formData.get("read");
       console.log(title);
       console.log(author);
-      console.log([pages]);
+      console.log(pages);
       console.log(read);
     }
   });
