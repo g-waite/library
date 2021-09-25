@@ -71,7 +71,14 @@ function newBook() {
     const formData = new FormData(this);
 
     for (const formElement of formData) {
-      console.log(formElement);
+      let title = formData.get("title");
+      let author = formData.get("author");
+      let pages = formData.get("pages");
+      let read = formData.get("read");
+      console.log(title);
+      console.log(author);
+      console.log([pages]);
+      console.log(read);
     }
   });
 }
