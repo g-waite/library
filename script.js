@@ -74,9 +74,11 @@ function newBook() {
 
     const book = new Book(title, author, pages, read);
 
-    const books = [...book];
+    //const books = [...book];
 
-    console.log(books);
+    myLibrary.push(book);
+
+    console.log(myLibrary);
 
     // book.forEach((book) => {
     // book.push(myLibrary);
