@@ -14,6 +14,7 @@ const book1 = new Book("The Hobbit", "J.R.R. Tolkien", "295", "false");
 const book2 = new Book("Mistborn", "Brandon Sanderson", "390", "true");
 
 let myLibrary = [book1, book2];
+console.log(myLibrary);
 
 displayBook();
 
@@ -63,21 +64,26 @@ function newBook() {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    //const book = new Book(title, author, pages, read);
-
-    // book.forEach((book) => {
-    //   book.push(myLibrary);
-    // });
     const formData = new FormData(this);
 
-    for (const formElement of formData) {
-      let title = formData.get("title");
-      let author = formData.get("author");
-      let pages = formData.get("pages");
-      let read = formData.get("read") == "true" ? "true" : "false";
+    //for (const formElement of formData) {
+    let title = formData.get("title");
+    let author = formData.get("author");
+    let pages = formData.get("pages");
+    let read = formData.get("read") == "true" ? "true" : "false";
 
-      //use book constructor and display new book.
-    }
+    const book = new Book(title, author, pages, read);
+
+    const books = [...book];
+
+    console.log(books);
+
+    // book.forEach((book) => {
+    // book.push(myLibrary);
+    //   console.log(myLibrary);
+    // });
+    //use book constructor and display new book .
+    //}
   });
 }
 
