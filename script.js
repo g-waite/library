@@ -14,21 +14,22 @@ const book1 = new Book("The Hobbit", "J.R.R. Tolkien", "295", "false");
 const book2 = new Book("Mistborn", "Brandon Sanderson", "390", "true");
 
 let myLibrary = [book1, book2];
-console.log(myLibrary);
 
 displayBook();
 
 //shows grid of books
 function displayBook() {
-  //const display = document.getElementsByClassName(".grid-container");
-  //const books = document.querySelectorAll(".book");
-  //books.forEach((book) => displayBook.removeChild(book));
+  const display = document.getElementById("grid-container");
+  console.log(display);
+  const books = document.querySelectorAll(".book");
+  books.forEach((book) => display.removeChild(book));
 
   for (let i = 0; i < myLibrary.length; i++) {
     addBookToLibrary(myLibrary[i]);
   }
 }
 
+//creates new book cards
 function addBookToLibrary(item) {
   const library = document.querySelector(".grid-container");
   const bookDiv = document.createElement("section");
@@ -57,7 +58,7 @@ function addBookToLibrary(item) {
 
   library.appendChild(bookDiv);
 }
-
+//Adds a new book via the form and inserts it into the library
 function newBook() {
   document.getElementById("overlay").style.display = "block";
 
@@ -66,7 +67,6 @@ function newBook() {
 
     const formData = new FormData(this);
 
-    //for (const formElement of formData) {
     let title = formData.get("title");
     let author = formData.get("author");
     let pages = formData.get("pages");
@@ -74,25 +74,15 @@ function newBook() {
 
     const book = new Book(title, author, pages, read);
 
-    //const books = [...book];
-
     myLibrary.push(book);
 
-    console.log(myLibrary);
+    displayBook();
 
-    // book.forEach((book) => {
-    // book.push(myLibrary);
-    //   console.log(myLibrary);
-    // });
-    //use book constructor and display new book .
-    //}
+    console.log(myLibrary);
   });
 }
 
-function addNewBook() {
-  displayBook();
-}
-
+//closes the form window
 function cancelForm() {
   document.getElementById("overlay").style.display = "none";
 }
