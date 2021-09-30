@@ -29,7 +29,7 @@ function displayBook() {
   }
 }
 
-//creates new book cards
+//creates new book cards to display
 function addBookToLibrary(item) {
   const library = document.querySelector(".grid-container");
   const bookDiv = document.createElement("section");
