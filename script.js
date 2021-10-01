@@ -58,7 +58,7 @@ function addBookToLibrary(item) {
 
   library.appendChild(bookDiv);
 }
-//Adds a new book via the form and inserts it into the library
+//Adds a new book via the form and inserts it into the library.
 function newBook() {
   document.getElementById("overlay").style.display = "block";
 
