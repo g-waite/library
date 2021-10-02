@@ -37,6 +37,7 @@ function addBookToLibrary(item) {
   const authorDiv = document.createElement("div");
   const pagesDiv = document.createElement("div");
   const readDiv = document.createElement("div");
+  const rmButton = document.createElement("button");
 
   bookDiv.classList.add("book", myLibrary.indexOf(item));
 
@@ -55,6 +56,9 @@ function addBookToLibrary(item) {
   readDiv.textContent = item.read;
   readDiv.classList.add("read");
   bookDiv.appendChild(readDiv);
+
+  rmButton.textContent = "Remove";
+  bookDiv.appendChild(rmButton);
 
   library.appendChild(bookDiv);
 }
