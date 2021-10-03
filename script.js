@@ -1,5 +1,6 @@
 const addBtn = document.querySelector(".add-book-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
+const rmButton = document.querySelector(".remove-btn");
 const form = document.forms[0];
 document.getElementById("overlay").style.display = "none";
 
@@ -38,7 +39,6 @@ function addBookToLibrary(item) {
   const pagesDiv = document.createElement("div");
   const readDiv = document.createElement("div");
   const rmButton = document.createElement("button");
-
   bookDiv.classList.add("book", myLibrary.indexOf(item));
 
   titleDiv.textContent = item.title;
@@ -58,6 +58,7 @@ function addBookToLibrary(item) {
   bookDiv.appendChild(readDiv);
 
   rmButton.textContent = "Remove";
+  rmButton.classList.add("remove-button");
   bookDiv.appendChild(rmButton);
 
   library.appendChild(bookDiv);
@@ -86,6 +87,8 @@ function newBook() {
   });
 }
 
+function rmBook() {}
+
 //closes the form window
 function cancelForm() {
   document.getElementById("overlay").style.display = "none";
@@ -93,3 +96,4 @@ function cancelForm() {
 
 addBtn.addEventListener("click", newBook);
 cancelBtn.addEventListener("click", cancelForm);
+rmButton.addEventListener("click", rmBook);
