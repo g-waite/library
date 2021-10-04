@@ -87,6 +87,7 @@ function newBook() {
   });
 }
 
+//removes book card from library
 function rmBook() {}
 
 //closes the form window
