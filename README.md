@@ -15,11 +15,12 @@ Library App Odin Project
 4. Add new book button so users can add books to the library
 
    Haven't used forms in javascript yet, look this up <Done>
-   Find a way to translate form data into something the constructor can use.
-   Currently using a "read/not read" text object for read status. Switch to using a button that toggles true/false.
+   Find a way to translate form data into something the constructor can use. <Done>
+   Currently using a "read/not read" text object for read status. Switch to using a button that toggles true/false. <Done>
 
 5. Allow users to remove book objects from the library
 
-   Create a button element in each array
-   Each book must be identified uniquely to allow removal of books
-   Find a way to link data attribute with array index
+   Create a button element in each array <Done>
+   Each book must be identified uniquely to allow removal of books <Done>
+   Find a way to link data attribute with array index <Done>
+   Use data attribute and array index to remove book card
