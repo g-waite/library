@@ -23,4 +23,4 @@ Library App Odin Project
    Create a button element in each array <Done>
    Each book must be identified uniquely to allow removal of books <Done>
    Find a way to link data attribute with array index <Done>
-   Use data attribute and array index to remove book card
+   Use data attribute and array index to remove book cards
